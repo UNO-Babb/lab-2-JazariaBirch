@@ -9,13 +9,28 @@ import datetime
 def main():
   #getting current time from system, storing to variable
   now = datetime.datetime.now()
-  currentHour = now.hour
+  currentHour = now.hour - 6
   currentMinute = now.minute
 
   print (currentHour, currentMinute) #this is just for checking, we should delete it later
 
   #TODO:
   #Ask user for hours
+  hours = input("enter hours:")
+  
+  mins = input("enter minutes:")
+  mins = int(mins)
+
+  futureMinute = currentMinute + mins
+  futureMinute = futureMinute % 60
+
+  futurehour = currentHour + mins
+  futurehour = futurehour % 24
+
+  strHour = str(futurehour)
+  strMin = str(futureMinute)
+
+  print(strHour + ":" +strMin)
   #Ask user for minutes
 
   #Calculate the time after the user-supplied time has passed.
