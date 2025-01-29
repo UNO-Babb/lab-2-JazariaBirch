@@ -16,13 +16,13 @@ def main():
               "As i see it, yes.", "Go for it."]
   #Answer question randomly with one of the options from your earlier list.
   question = input("Ask a yes or No Question:")
-  
+
   length = len(answers)
   r= random.random() * length
 
   r = int(r)
 
-  print(r)
+  #print(r)
   response = answers[r]
   print(response)
 
